@@ -13,9 +13,9 @@
 
 ### Set path and requisite variables.
 # Kaldi root: Where is your kaldi directory?
-kaldi=/home/kaldi
+kaldi=/usr/kt/automatic-speaker-verification/kaldi
 # Source data: Where is your source (wavefile) data directory?
-source=/path/to/the/krs/dataset
+source=/usr/kt/automatic-speaker-verification/dataset/kaldi-tutorial-small-kr
 # Log file: Log file will be saved with the name set below.
 logfile=1st_test
 log_dir=log
@@ -23,10 +23,10 @@ log_dir=log
 resultfile=result.txt
 
 ### Number of jobs.
-train_nj=2
-decode_nj=2
+train_nj=8
+decode_nj=8
 # dnn number of jobs.
-dnn_train_nj=2 # if you wnat to run it by gpu then set it 1. otherwise kaldi will use cpu for dnn training.
+dnn_train_nj=1 # if you wnat to run it by gpu then set it 1. otherwise kaldi will use cpu for dnn training.
 
 ### CMD
 train_cmd=utils/run.pl
